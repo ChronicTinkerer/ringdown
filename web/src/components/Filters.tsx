@@ -77,10 +77,11 @@ export default function FiltersPanel({ filters, devices, onChange, onReset }: Pr
         </div>
 
         <div>
-          <label className={label}>Favorites</label>
-          <select className={select} value={filters.favorited} onChange={set('favorited')}>
+          <label className={label} htmlFor="favorites-filter">Favorites</label>
+          <select id="favorites-filter" className={select} value={filters.favorited} onChange={set('favorited')}>
             <option value="">All videos</option>
-            <option value="1">❤️ Favorites only</option>
+            <option value="1">❤️ Liked (favorites)</option>
+            <option value="0">Not liked (non-favorites)</option>
           </select>
         </div>
 
